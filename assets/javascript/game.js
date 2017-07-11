@@ -13,7 +13,7 @@ var loss;
 var win;
 var goal;
 var random;
-
+var number_options=[];
 
 //Tested out to see that the counter works
 //random number updates the global variable
@@ -22,8 +22,15 @@ var random;
 $(document).ready(function(){
 
 	//random number that will go to each image
-	random=Math.floor(Math.random() * (13-1+1))+1;
+	// random=Math.floor(Math.random() * (13-1+1))+1;
 
+	//Create a for loop to fill in an array of random numbers(4)
+	for(var i=0; i < 4; i++){
+		var ran = Math.floor(Math.random()* (13-1+1))+1;
+		number_options[i]= ran;
+	}
+
+	console.log(number_options[1]);
 	//created random number for user to guess 
 	var guessRandom= Math.floor(Math.random() * (100-40+1))+40;
 
@@ -31,10 +38,71 @@ $(document).ready(function(){
 	$("#guess").text(guessRandom);
 
 	// create an image then get it a random function
-	$("#summer, #morty, #rickSanchez").on("click",function(){
+	$("#rickSanchez").on("click",function(){
 
 		//Everytime user clicks the pictures it starts a counter
-		counter += random;	
+		counter += number_options[0];	
+		console.log(number_options[0]);
+
+		console.log("you clicked " + counter + " this many times");
+
+		//Created conditions for going over the Guess number
+		if(guessRandom === counter){
+
+			alert("You win");
+		}
+		else if(counter > guessRandom ){
+
+			alert("you lose");
+		}
+	});
+
+		// create an image then get it a random function
+	$("#morty").on("click",function(){
+
+		//Everytime user clicks the pictures it starts a counter
+		counter += number_options[1];	
+		console.log(number_options[1]);
+
+		console.log("you clicked " + counter + " this many times");
+
+		//Created conditions for going over the Guess number
+		if(guessRandom === counter){
+
+			alert("You win");
+		}
+		else if(counter > guessRandom ){
+
+			alert("you lose");
+		}
+	});
+
+		// create an image then get it a random function
+	$("#jerry").on("click",function(){
+
+		//Everytime user clicks the pictures it starts a counter
+		counter += number_options[2];	
+		console.log(number_options[2]);
+
+		console.log("you clicked " + counter + " this many times");
+
+		//Created conditions for going over the Guess number
+		if(guessRandom === counter){
+
+			alert("You win");
+		
+		}
+		else if(counter > guessRandom ){
+
+			alert("you lose");
+		}
+	});
+
+	$("#summer").on("click",function(){
+
+		//Everytime user clicks the pictures it starts a counter
+		counter += number_options[3];	
+		console.log(number_options[3]);
 
 		console.log("you clicked " + counter + " this many times");
 
