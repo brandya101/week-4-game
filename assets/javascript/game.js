@@ -37,6 +37,49 @@ $(document).ready(function(){
 	//Updates the title or user guess header
 	$("#guess").text(guessRandom);
 
+	//reset function 
+	function reset(){
+		ran= Math.floor(Math.random()*(13-1+1))+1;
+		number_options[i]=ran;
+
+		guessRandom=Math.floor(Math.random()*(100-40+1))+40;
+		$("guess").text(guessRandom);
+
+	}
+
+	function theMeeseeks(){
+	 if(guessRandom-counter === 5)
+		{
+			//created new img tag
+			var meseeks= $("<img>");
+
+			meseeks.addClass("imr");
+
+			meseeks.attr("src","assets/images/meseeks.jpeg");
+
+			// $(".mesee").append(meseeks);
+			// meseeks.css("display","none");
+			// $(".imr").css("display","block").fadeIn('slow');	
+
+
+		}
+	}
+
+	function madRick(){
+		if(guessRandom-counter === 10){
+			 var angryRick= $("<img>");
+
+			 angryRick.addClass("ri");
+
+			 angryRick.attr("src","assets/images/rickmad.jpg");
+
+			 // $(".ri").append(angryRick);
+			 angryRick.hide()
+			 $(".ri").show();
+		}
+	}
+
+
 	// create an image then get it a random function
 	$("#rickSanchez").on("click",function(){
 
@@ -46,14 +89,18 @@ $(document).ready(function(){
 
 		console.log("you clicked " + counter + " this many times");
 
+		theMeeseeks();
+		madRick();
 		//Created conditions for going over the Guess number
 		if(guessRandom === counter){
 
 			alert("You win");
+			reset();
 		}
 		else if(counter > guessRandom ){
 
 			alert("you lose");
+			reset();
 		}
 	});
 
@@ -66,14 +113,19 @@ $(document).ready(function(){
 
 		console.log("you clicked " + counter + " this many times");
 
+		theMeeseeks();
+		madRick();
+
 		//Created conditions for going over the Guess number
 		if(guessRandom === counter){
 
 			alert("You win");
+			reset();
 		}
 		else if(counter > guessRandom ){
 
 			alert("you lose");
+			reset();
 		}
 	});
 
@@ -86,15 +138,19 @@ $(document).ready(function(){
 
 		console.log("you clicked " + counter + " this many times");
 
+		theMeeseeks();
+		madRick();
+
 		//Created conditions for going over the Guess number
 		if(guessRandom === counter){
 
 			alert("You win");
-		
+			reset();
 		}
 		else if(counter > guessRandom ){
 
 			alert("you lose");
+			reset();
 		}
 	});
 
@@ -106,14 +162,19 @@ $(document).ready(function(){
 
 		console.log("you clicked " + counter + " this many times");
 
+		theMeeseeks();
+		madRick();
+
 		//Created conditions for going over the Guess number
 		if(guessRandom === counter){
 
 			alert("You win");
+			reset();
 		}
 		else if(counter > guessRandom ){
 
 			alert("you lose");
+			reset();
 		}
 	});
 });
