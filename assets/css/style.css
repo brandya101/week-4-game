@@ -1,3 +1,30 @@
+*{
+	color:white;
+}
+
+body, html {
+ 
+    /* The image used */
+    background-image: url("../images/showme.jpeg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: repeat;
+    background-size: 100%;
+}
+
+.h1, h1{
+	font-family: 'Rakkas', cursive;
+
+}
+
+#bodyParagraph{
+	border-style: bold solid 2px;
+}
+
 #rickSanchez, #morty, #summer, #jerry{
 	max-width:200px;
 	max-height:200px;
@@ -6,4 +33,14 @@
 .imr {
 	max-width:200px;
 	max-height:200px;
+}
+
+.score{
+	backface-visibility: none;
+}
+
+#counter{
+	font-size: 50px;
+	color:white;
+	border: 2px solid black;
 }

@@ -4,17 +4,83 @@
 	<title> Rick and Morty Crystal Game </title>
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Rakkas" rel="stylesheet">
+
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 	    crossorigin="anonymous"></script>
 	    <script src="assets/javascript/game.js"></script>
+
+	    <style type="text/css">
+	    	.h1, h1{
+	font-family: 'Rakkas', cursive;
+
+}
+	    </style>
 </head>
 <body>
-	<h1> Guess this Number: <span id="guess"></span></h1>
 	<div id="new"></div>
 	<div id="time"></div>
 	<div id="score count"></div>
 	
+	
+
 	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<h1>Rick &amp; Morty Collecting Game</h1>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-5" id="bodyParagraph">
+
+			<p>	
+			You will be given a random number at the start of the game.
+			</p>
+			<br>
+
+			<p>Each character below will add specific amount of points to your total score.
+			</p>
+
+			<br>
+
+			<p>You win the game by matching your total score to the random number. You lose the game if you go over the number.
+			</p>
+
+			<br>
+
+			<p>The value of the each picture is hidden until you click on them. The values each time you restart the game. 
+			</p>
+
+			<br>
+
+			<p>
+			Special characters will appear that will give you bonus values (click and find out!)
+			</p>
+
+			</div>
+		</div>
+		
+
+		<div class="row">	
+			<div class="col-md-3">
+				<h2> Guess this Number: <span id="guess"></span></h2>
+			</div>
+		</div>
+		<br><br><br>
+
+		<div class="row">
+			<div class="col-md-4" >
+
+				<div class="win"></div>
+				<div class="losses"></div>
+
+			</div>
+
+		</div>
+
+
+
 		<div class="row">
 
 				<div class="col-md-3 rick"><img id="rickSanchez" src="assets/images/rick.jpeg" alt="Rick Sanchez" ></div>
@@ -31,6 +97,19 @@
  -->
 				<div class="col-md-3 morty"><img id="morty" src="assets/images/morty.jpg"></div>
 
+		</div>
+
+		<br><br>
+
+		<div class="row">
+
+			<div class="col-md-6">
+				
+				<div id="counter"></div>
+				
+			</div>
+
+		
 		</div>
 
 	</div>
